@@ -1,0 +1,28 @@
+default:
+
+  extensions:
+    Behat\MinkExtension:
+      base_url: https://www.google.com
+      goutte: ~
+
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: behat-test-report
+      print_args: true
+      print_outp: true
+      loop_break: true
+
+  formatters:
+    pretty: true
+    html:
+      output_path: ./logs
+
+  suites:
+    default:
+      paths: &featurePaths
+        - '%paths.base%/features'
+      contexts: &contexts
+        - FeatureContext
+      filters:
+        tags: ~@skip

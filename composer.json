@@ -1,0 +1,13 @@
+{
+    "name": "visay/behat-from-scratch",
+    "description": "Example behat setup for any php project.",
+    "license": "MIT",
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "require": {
+        "behat/mink-extension": "~2.2",
+        "behat/mink-goutte-driver": "~1.2",
+        "emuse/behat-html-formatter": "~0.1"
+    }
+}
